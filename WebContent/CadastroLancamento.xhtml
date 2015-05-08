@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Cadastro de lançamento</title>
+
+	<h:outputStylesheet library="css" name="consulta-lancamentos.css" />
+	<h:outputStylesheet library="css" name="sistema.css" />
+
+</h:head>
+<h:body>
+	<h:commandButton value="Novo" />
+	<h:commandButton value="Consulta" />
+
+	<h1>Cadastro de lançamento</h1>
+
+	<h:form id="form">
+		<h:panelGrid columns="2" styleClass="form-grid" columnClasses="label, campo">
+
+			<h:outputLabel value="Tipo" />
+			<h:selectOneRadio>
+				<f:selectItem itemLabel="Receita" />
+				<f:selectItem itemLabel="Despesa" />
+			</h:selectOneRadio>
+
+			<h:outputLabel value="Pessoa" />
+			<h:selectOneMenu>
+				<f:selectItem itemValue="Escola 1" />
+				<f:selectItem itemValue="Escola 2" />
+				<f:selectItem itemValue="Escola 3" />
+			</h:selectOneMenu>
+
+			<h:outputLabel value="Descrição" />
+			<h:inputText />
+
+			<h:outputLabel value="Valor" />
+			<h:inputText />
+
+			<h:outputLabel value="Data vencimento" />
+			<h:inputText />
+
+
+
+			<h:outputLabel value="" />
+			<h:panelGroup>
+				<h:selectBooleanCheckbox label="asdf" />
+				<h:outputLabel value="Conta paga" />
+			</h:panelGroup>
+
+			<h:outputLabel value="" />
+			<h:commandButton type="submit" value="Cadastrar" />
+
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
