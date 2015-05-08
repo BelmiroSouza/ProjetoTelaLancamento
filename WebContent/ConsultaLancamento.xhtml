@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>Lançamentos</title>
@@ -11,9 +14,12 @@
 <h:body>
 	<h1>Lançamentos</h1>
 	<h:form id="frm">
-		<h:commandButton value="Novo lançamento" />
+		<h:commandButton value="Novo lançamento"
+			action="CadastroLancamento?faces-redirect=true" />
 
-		<h:dataTable var="lancamento" value="#{consultaLancamentoBean.lancamentos}" width="100%" class="grid" headerClass="cabecalho" rowClasses="cor-sim, cor-nao"
+		<h:dataTable var="lancamento"
+			value="#{consultaLancamentoBean.lancamentos}" width="100%"
+			class="grid" headerClass="cabecalho" rowClasses="cor-sim, cor-nao"
 			columnClasses="tipo, pessoa, descricao, valor, vencimento, pagamento, situacao">
 
 			<h:column>

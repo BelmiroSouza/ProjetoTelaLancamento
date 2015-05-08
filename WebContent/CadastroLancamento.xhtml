@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>Cadastro de lançamento</title>
@@ -10,13 +13,17 @@
 
 </h:head>
 <h:body>
-	<h:commandButton value="Novo" />
-	<h:commandButton value="Consulta" />
+	<h:form>
+		<h:commandButton value="Novo" />
+		<h:commandButton value="Consulta"
+			action="ConsultaLancamento?faces-redirect=true" />
+	</h:form>
 
 	<h1>Cadastro de lançamento</h1>
 
 	<h:form id="form">
-		<h:panelGrid columns="2" styleClass="form-grid" columnClasses="label, campo">
+		<h:panelGrid columns="2" styleClass="form-grid"
+			columnClasses="label, campo">
 
 			<h:outputLabel value="Tipo" />
 			<h:selectOneRadio>
@@ -39,8 +46,6 @@
 
 			<h:outputLabel value="Data vencimento" />
 			<h:inputText />
-
-
 
 			<h:outputLabel value="" />
 			<h:panelGroup>
